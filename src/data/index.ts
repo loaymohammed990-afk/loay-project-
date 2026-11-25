@@ -11,7 +11,7 @@ export const portfolio: Portfolio = {
 };
 export const dictionary = translations;
 export type Copy = typeof translations.ar;
-export const navigation = ['home', 'about', 'skills', 'projects', 'services', 'contact'] as const;
+export const navigation = ['home', 'projects', 'about', 'skills', 'services', 'contact'] as const;
 export function safeExternal(value?: string): string | undefined {
   if (!value) return undefined;
   try {

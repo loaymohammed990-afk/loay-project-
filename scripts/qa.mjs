@@ -149,6 +149,22 @@ await test('Mobile menu: keyboard, Escape, close after navigation', async () => 
   await page.locator('nav').getByRole('link', { name: 'Projects' }).click();
   assert.equal(await page.locator('nav').isVisible(), false);
 });
+await test('Service disclosures support keyboard and direct contact', async () => {
+  await page.setViewportSize({ width: 1440, height: 900 });
+  const cards = page.locator('.service-card');
+  for (const card of await cards.all()) {
+    const summary = card.locator('summary');
+    await summary.focus();
+    await page.keyboard.press('Enter');
+    assert.equal(await card.locator('details').getAttribute('open'), '');
+    assert.equal(await card.locator('p').isVisible(), true);
+    assert.equal(await card.locator('a').getAttribute('href'), '#contact');
+  }
+  assert.equal(await page.locator('.service-card details[open]').count(), 1);
+  await cards.last().locator('summary').focus();
+  await page.keyboard.press('Enter');
+  assert.equal(await page.locator('.service-card details[open]').count(), 0);
+});
 await test('Reduced motion', async () => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
   assert.equal(await page.locator('.code-window').evaluate(el => getComputedStyle(el).animationName), 'none');
