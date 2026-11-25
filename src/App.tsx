@@ -28,7 +28,7 @@ export default function App() {
   }, [locale]);
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
-    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', theme === 'dark' ? '#060b15' : '#f7fbfd');
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', theme === 'dark' ? '#111310' : '#f7f9f2');
     try { localStorage.setItem('portfolio-theme', theme); } catch { /* Preferences are optional. */ }
   }, [theme]);
   useEffect(() => {
@@ -76,7 +76,7 @@ export default function App() {
         </div></section>
         <section className="section skills-section" id="skills"><div className="container">
           <SectionHeading tag={t.skillsTag} title={t.skillsTitle} accent={t.skillsAccent} description={t.skillsIntro}/>
-          <div className="skills-layout"><div className="skills-feature" data-reveal><div className="skills-feature-top"><TerminalSquare size={25} aria-hidden="true"/><span>{t.toolbox}</span></div><div className="skills-graphic" aria-hidden="true"><div className="graphic-ring ring-one"/><div className="graphic-ring ring-two"/><div className="graphic-core"><Code2 size={48}/></div></div><h3>{t.toolQuote}</h3><p>{t.toolNote}</p></div>
+          <div className="skills-layout"><div className="skills-feature" data-reveal><div className="skills-feature-top"><TerminalSquare size={25} aria-hidden="true"/><span>{t.toolbox}</span></div><h3>{t.toolQuote}</h3><p>{t.toolNote}</p></div>
             <div className="skills-groups">{portfolio.skillGroups.map(group => { const Icon = skillIcons[group.id as keyof typeof skillIcons] ?? Code2; return <div className="skill-group" key={group.id} data-reveal><h3><Icon size={20} aria-hidden="true"/>{group.title[locale]}</h3><div className="skill-pills">{group.items.map(item => <span key={item} dir="ltr">{item}</span>)}</div></div>; })}</div>
           </div>
         </div></section>

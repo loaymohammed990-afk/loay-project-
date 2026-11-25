@@ -167,7 +167,7 @@ await test('Service disclosures support keyboard and direct contact', async () =
 });
 await test('Reduced motion', async () => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
-  assert.equal(await page.locator('.code-window').evaluate(el => getComputedStyle(el).animationName), 'none');
+  assert.equal(await page.locator('.hero-emblem').evaluate(el => getComputedStyle(el).animationName), 'none');
   assert.equal(await page.locator('html').evaluate(el => getComputedStyle(el).scrollBehavior), 'auto');
 });
 await test('Keyboard skip link', async () => {
