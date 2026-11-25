@@ -1,0 +1,33 @@
+# Dependencies and production output
+node_modules/
+dist/
+
+# Generated QA artifacts and local delivery reports
+qa/
+test-results/
+playwright-report/
+/DELIVERY-REPORT.md
+/QA-CHECKLIST.md
+
+# Archives and logs
+*.zip
+*.7z
+*.tar
+*.tar.gz
+*.log
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.local
+*.pem
+*.key
+
+# Editor, OS and compiler caches
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.tsbuildinfo

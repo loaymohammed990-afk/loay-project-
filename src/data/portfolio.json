@@ -1,0 +1,42 @@
+{
+  "profile": {
+    "name": { "ar": "لؤي محمد الظاهري", "en": "Loay Mohammed Al-Dhaheri" },
+    "initials": "LM",
+    "role": { "ar": "مطور واجهات أمامية", "en": "Front-End Developer" },
+    "education": { "ar": "نظم معلومات حاسوبية", "en": "Computer Information Systems" },
+    "email": "info@loay-mohd.pro",
+    "phone": "+97471438712",
+    "github": "https://github.com/loaymohammed990-afk",
+    "whatsapp": "https://wa.me/97471438712"
+  },
+  "skillGroups": [
+    { "id": "fundamentals", "title": { "ar": "أساسيات الويب", "en": "Web fundamentals" }, "items": ["HTML5", "CSS3", "JavaScript", "TypeScript"] },
+    { "id": "frameworks", "title": { "ar": "الأطر والتصميم", "en": "Frameworks & styling" }, "items": ["React", "Next.js", "Tailwind CSS", "Bootstrap"] },
+    { "id": "version-control", "title": { "ar": "إدارة الكود", "en": "Version control" }, "items": ["Git / GitHub"] }
+  ],
+  "projects": [
+    {
+      "id": "al-wassabi", "name": { "ar": "منصة الوصابي", "en": "Al-Wassabi Platform" }, "category": "project",
+      "description": { "ar": "مشروع حقيقي ضمن أعمالي. ستُضاف معلومات نطاق العمل ودوري والتقنيات بعد اعتماد تفاصيل المشروع.", "en": "A real project in my portfolio. Scope, my role and technologies will be added once the project details are confirmed." },
+      "image": "/projects/al-wassabi.svg", "illustrative": true
+    },
+    {
+      "id": "german-solar", "name": { "ar": "جرمان للطاقة الشمسية", "en": "German Solar Energy" }, "category": "project",
+      "description": { "ar": "مشروع حقيقي ضمن أعمالي. ستُضاف الأهداف ونطاق العمل والصور والروابط بعد مراجعتها.", "en": "A real project in my portfolio. Goals, scope, screenshots and links will be added after review." },
+      "image": "/projects/german-solar.svg", "illustrative": true
+    },
+    {
+      "id": "phone-repair", "name": { "ar": "منصة إدارة صيانة الهواتف", "en": "Phone Repair Management Platform" }, "category": "training",
+      "description": { "ar": "مشروع تدريبي في مجال إدارة صيانة الهواتف، للتعلم والتطبيق العملي. ستُضاف الوظائف المنفذة والتقنيات عند تأكيدها.", "en": "A training project in phone repair management for learning and practice. Implemented features and technologies will be added once confirmed." },
+      "image": "/projects/phone-repair.svg", "illustrative": true
+    }
+  ],
+  "services": [
+    { "id": "frontend", "icon": "code", "title": { "ar": "تطوير واجهات مواقع الويب", "en": "Front-End Development" }, "description": { "ar": "واجهات واضحة ومتناسقة تهتم بتفاصيل الاستخدام واحتياجات المشروع.", "en": "Clear, consistent interfaces shaped around usability and your project needs." } },
+    { "id": "figma", "icon": "figma", "title": { "ar": "تحويل تصاميم Figma إلى React", "en": "Figma to React" }, "description": { "ar": "تحويل التصميم إلى مكونات React مع العناية بالتباعد وتفاصيل الواجهة.", "en": "Turning designs into React components with care for spacing and interface details." } },
+    { "id": "responsive", "icon": "phone", "title": { "ar": "مواقع متجاوبة", "en": "Responsive Websites" }, "description": { "ar": "تخطيطات تتكيف مع الهاتف والتابلت وسطح المكتب لتجربة قراءة وتصفح مريحة.", "en": "Layouts that adapt to phones, tablets and desktops for comfortable browsing." } },
+    { "id": "landing", "icon": "globe", "title": { "ar": "مواقع شخصية وصفحات هبوط", "en": "Portfolios & Landing Pages" }, "description": { "ar": "حضور رقمي يعرض هويتك وفكرتك بمحتوى منظم ووسائل تواصل واضحة.", "en": "A digital presence that presents your identity with focused content and clear contact options." } },
+    { "id": "dashboard", "icon": "dashboard", "title": { "ar": "واجهات لوحات التحكم", "en": "Dashboard Interfaces" }, "description": { "ar": "تنظيم المعلومات والإجراءات في واجهات تساعد على متابعة العمل بسهولة.", "en": "Organizing information and actions into interfaces that make work easier to follow." } },
+    { "id": "ux", "icon": "sparkles", "title": { "ar": "تحسين الواجهات وتجربة المستخدم", "en": "UI & UX Refinement" }, "description": { "ar": "مراجعة التنقل والوضوح والتناسق وتحسين تفاصيل التفاعل.", "en": "Refining navigation, clarity, consistency and the details of interaction." } }
+  ]
+}
