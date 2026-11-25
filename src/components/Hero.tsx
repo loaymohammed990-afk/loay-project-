@@ -1,4 +1,4 @@
-import { Code2, Github, Mail, MessageCircle, Sparkles } from 'lucide-react';
+import { ChevronDown, Code2, Github, Mail, MessageCircleMore, PanelsTopLeft, Sparkles } from 'lucide-react';
 import { assetUrl, portfolio, safeExternal, type Copy } from '../data';
 import type { Locale } from '../types';
 
@@ -7,7 +7,7 @@ export function SocialLinks({ t }: { t: Copy }) {
   return <div className="social-links">
     {safeExternal(profile.github) && <a href={safeExternal(profile.github)} target="_blank" rel="noopener noreferrer" aria-label="GitHub"><Github size={20} aria-hidden="true"/></a>}
     <a href={`mailto:${profile.email}`} aria-label={t.email}><Mail size={20} aria-hidden="true"/></a>
-    {safeExternal(profile.whatsapp) && <a href={safeExternal(profile.whatsapp)} target="_blank" rel="noopener noreferrer" aria-label={t.whatsapp}><MessageCircle size={20} aria-hidden="true"/></a>}
+    {safeExternal(profile.whatsapp) && <a href={safeExternal(profile.whatsapp)} target="_blank" rel="noopener noreferrer" aria-label={t.whatsapp}><MessageCircleMore size={20} aria-hidden="true"/></a>}
     {safeExternal(profile.linkedin) && <a href={safeExternal(profile.linkedin)} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><span dir="ltr">in</span></a>}
   </div>;
 }
@@ -22,7 +22,7 @@ export default function Hero({ t, locale }: { t: Copy; locale: Locale }) {
       <p className="hero-role">{profile.role[locale]}</p>
       <h1 id="hero-title">{t.headline}<br/><span className="text-gradient">{t.headlineAccent}</span></h1>
       <p className="hero-description">{t.intro}</p>
-      <div className="hero-actions"><a className="btn btn-primary" href="#projects">{t.explore}</a><a className="btn btn-outline" href="#contact">{t.contactMe}</a></div>
+      <div className="hero-actions"><a className="btn btn-primary" href="#projects"><PanelsTopLeft size={19} aria-hidden="true"/>{t.explore}</a><a className="btn btn-outline" href="#contact"><Mail size={19} aria-hidden="true"/>{t.contactMe}</a></div>
       <SocialLinks t={t}/>
     </div>
     <div className="hero-visual" role="img" aria-label={t.visualLabel}>
@@ -46,6 +46,6 @@ export default function Hero({ t, locale }: { t: Copy; locale: Locale }) {
       </div>
       <div className="floating-chip floating-chip-bottom"><span className="floating-icon"><Sparkles size={20}/></span><div><strong>{t.cleanCode}</strong><small>{t.cleanNote}</small></div></div>
     </div>
-    <a className="scroll-cue" href="#about">{t.discover}<span aria-hidden="true">↓</span></a>
+    <a className="scroll-cue" href="#about">{t.discover}<ChevronDown size={18} aria-hidden="true"/></a>
   </section>;
 }

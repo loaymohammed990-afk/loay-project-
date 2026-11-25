@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Menu, Moon, Sun, X } from 'lucide-react';
+import { Menu, Moon, SunMedium, X } from 'lucide-react';
 import { navigation, type Copy } from '../data';
 import type { Locale } from '../types';
 
@@ -30,7 +30,7 @@ export default function Header({ t, locale, theme, active, onLocale, onTheme }: 
       </nav>
       <div className="nav-actions">
         <button className="icon-button language-button" onClick={onLocale} aria-label={`${locale === 'ar' ? 'EN' : 'AR'} — ${t.switchLanguage}`} lang={locale === 'ar' ? 'en' : 'ar'}>{locale === 'ar' ? 'EN' : 'AR'}</button>
-        <button className="icon-button" onClick={onTheme} aria-label={theme === 'dark' ? t.light : t.dark}>{theme === 'dark' ? <Sun size={19} aria-hidden="true"/> : <Moon size={19} aria-hidden="true"/>}</button>
+        <button className="icon-button theme-button" onClick={onTheme} aria-label={theme === 'dark' ? t.light : t.dark}>{theme === 'dark' ? <SunMedium key="sun" size={20} aria-hidden="true"/> : <Moon key="moon" size={20} aria-hidden="true"/>}</button>
         <a className="nav-contact" href="#contact">{t.talk}</a>
         <button ref={toggle} className="icon-button mobile-menu-button" onClick={() => setOpen(!open)} aria-controls="main-navigation" aria-expanded={open} aria-label={open ? t.closeMenu : t.openMenu}>{open ? <X size={22}/> : <Menu size={22}/>}</button>
       </div>
